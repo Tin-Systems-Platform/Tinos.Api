@@ -1,0 +1,40 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+
+  "metadata": [
+    {
+      "src": [
+        { "src": "../Tinos.Api.Common", "files": [ "Tinos.Api.Common.csproj" ] }
+      ],
+      "dest": "api",
+      "disableGitFeatures": true,
+      "allowCompilationErrors": true,
+      "namespaceLayout": "nested"
+    }
+  ],
+
+  "build": {
+    "content": [
+      {
+        "src": ".",
+        "files": [ "**/*.md", "**/*.yml" ],
+        "exclude": [ "_site/**" ]
+      }
+    ],
+    "resource": [
+      {
+        "src": ".",
+        "files": [ "images/**" ]
+      }
+    ],
+    "output": "_site",
+    "template": [ "default", "modern", "templates/custom" ],
+    "globalMetadata": {
+      "_appName": "Tinos.Api",
+      "_appTitle": "Tinos.Api Documentation",
+      "_enableSearch": true,
+      "_lang": "en",
+      "pdf": false
+    }
+  }
+}

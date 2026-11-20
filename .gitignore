@@ -1,0 +1,9 @@
+# docfx
+_site/
+
+# VS
+.vs/
+
+# .NET
+bin/
+obj/
