@@ -20,6 +20,6 @@
 ## Publishing and misc
 - [ ] Add a NuGet package for the library.
 - [ ] Make sure it supports VB.NET
-- [ ] Add a license file and ensure proper licensing for all dependencies.
-- [ ] Add a README file with usage instructions and examples.
+- [x] Add a license file and ensure proper licensing for all dependencies.
+- [x] Add a README file with usage instructions and examples.
 - [ ] Examples of the library on a example cosmos kernel.
