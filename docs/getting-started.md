@@ -25,14 +25,14 @@ Currently, Tinos.Api is not available on NuGet. To use Tinos.Api in your project
 To add Tinos.Api as a submodule, run the following command in your project directory:
 
 ```bash
-git submodule add #TODO: Add the repository URL here
+git submodule add https://github.com/Tin-Systems-Platform/Tinos.Api.git
 ```
 
 ### Cloning outside of your project
 Alternatively, you can clone the Tinos.Api repository outside of your project and reference it in your project. To do this, run the following command:
 
 ```bash
-git clone #TODO: Add the repository URL here
+git clone https://github.com/Tin-Systems-Platform/Tinos.Api.git
 ```
 
 ### Adding a project reference
