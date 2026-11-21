@@ -9,7 +9,9 @@ namespace Tinos.Api.Common.FS.Partitions
     /// </summary>
     public enum PartitionTableKind
     {
+        /// <summary>GUID Partition Table, commonly used on modern disks.</summary>
         GPT,
+        /// <summary>Master Boot Record partition table.</summary>
         MBR,
     }
 }

@@ -287,7 +287,11 @@ public class TinPartManager
         }
     }
 
-    // Checks physical disk boundaries without overflowing ulong.
+    /// <summary>Checks whether a non-empty sector range lies within the physical disk bounds.</summary>
+    /// <param name="disk">The disk whose bounds are checked.</param>
+    /// <param name="startSector">The first sector in the range.</param>
+    /// <param name="sectorCount">The number of sectors in the range.</param>
+    /// <returns><see langword="true"/> if the range is valid and within the disk.</returns>
     private static bool IsRangeWithinDisk(
         IBlockDevice disk,
         ulong startSector,
@@ -299,6 +303,9 @@ public class TinPartManager
             && sectorCount <= disk.BlockCount - startSector;
     }
 
+    /// <summary>Gets a storage device by index, reporting invalid or missing devices.</summary>
+    /// <param name="diskIndex">The zero-based storage device index.</param>
+    /// <returns>The device at the index, or <see langword="null"/> if unavailable.</returns>
     private static IBlockDevice? GetDisk(int diskIndex)
     {
         if (diskIndex < 0 ||
