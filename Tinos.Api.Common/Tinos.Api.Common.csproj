@@ -10,8 +10,8 @@
     <Description>The common API for Tinos</Description>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <AssemblyVersion>1.0.0.0-alpha</AssemblyVersion>
-    <FileVersion>1.0.0.0-alpha</FileVersion>
+	<AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Tin-Systems-Platform/Tinos.Api</RepositoryUrl>
