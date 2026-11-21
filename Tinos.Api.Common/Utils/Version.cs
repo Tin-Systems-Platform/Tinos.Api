@@ -38,11 +38,19 @@ namespace Tinos.Api.Common.Utils
         public int Patch { get; }
 
         /// <summary>
+        /// If the version is unstable, this property can hold additional information about the unstable version (e.g., "alpha", "beta", "rc1").
+        /// </summary>
+        public string UnstableVersion { get; set; }
+
+        /// <summary>
         /// Returns a string representation of the version in the format "Major.Minor.Patch".
         /// </summary>
         /// <returns>the string representation of the version</returns>
         public override string ToString()
         {
+            if (!string.IsNullOrEmpty(UnstableVersion))
+                return $"{Major}.{Minor}.{Patch}-{UnstableVersion}";
+
             return $"{Major}.{Minor}.{Patch}";
         }
 
@@ -72,20 +80,29 @@ namespace Tinos.Api.Common.Utils
             if (string.IsNullOrWhiteSpace(versionString))
                 return false;
 
+            string[] versionParts = versionString.Split('-', 2);
+            string[] numbers = versionParts[0].Split('.');
 
-
-            var parts = versionString.Split('.');
-
-            if (parts.Length != 3 ||
-                !int.TryParse(parts[0], out int major) ||
-                !int.TryParse(parts[1], out int minor) ||
-                !int.TryParse(parts[2], out int patch))
+            if (numbers.Length != 3 ||
+                !int.TryParse(numbers[0], out int major) ||
+                !int.TryParse(numbers[1], out int minor) ||
+                !int.TryParse(numbers[2], out int patch))
                 return false;
 
             if (major < 0 || minor < 0 || patch < 0)
                 return false;
 
-            version = new Version(major, minor, patch);
+            if (versionParts.Length == 2 &&
+                string.IsNullOrWhiteSpace(versionParts[1]))
+                return false;
+
+            version = new Version(major, minor, patch)
+            {
+                UnstableVersion = versionParts.Length == 2
+                    ? versionParts[1]
+                    : null
+            };
+
             return true;
         }
     }
