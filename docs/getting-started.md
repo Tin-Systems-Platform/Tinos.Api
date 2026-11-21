@@ -19,25 +19,40 @@ If you intend to build an operating system using Tinos.Api, you will also need:
 
 ## Adding Tinos.Api to your project
 
-Currently, Tinos.Api is not available on NuGet. To use Tinos.Api in your project, you will need to clone the repository and reference the project directly or use the repo as a submodule in your own repository.
+The following sections explain how to add Tinos.Api to your project. Several methods are available, but using the NuGet package is the recommended approach.
 
-### Submodule
-To add Tinos.Api as a submodule, run the following command in your project directory:
+### Using the NuGet package (Recommended)
 
-```bash
-git submodule add #TODO: Add the repository URL here
-```
-
-### Cloning outside of your project
-Alternatively, you can clone the Tinos.Api repository outside of your project and reference it in your project. To do this, run the following command:
+Tinos.Api is available through NuGet. To install the common package, run the following command in your project directory:
 
 ```bash
-git clone #TODO: Add the repository URL here
+dotnet add package Tinos.Api.Common
 ```
 
-### Adding a project reference
-Once you have the Tinos.Api project in your solution, you can add a reference to it in your projects `.csproj` file. Open the `.csproj` file of your project and add the following line inside the `<ItemGroup>` section:
+This package contains the common APIs shared across supported languages and projects.
+
+### Using a Git submodule (Not recommended)
+
+You can add the Tinos.Api repository as a Git submodule by running:
+
+```bash
+git submodule add https://github.com/Tin-Systems-Platform/Tinos.Api
+```
+
+### Cloning outside your project (Not recommended)
+
+Alternatively, you can clone the Tinos.Api repository separately:
+
+```bash
+git clone https://github.com/Tin-Systems-Platform/Tinos.Api
+```
+
+### Adding a project reference (Not recommended)
+
+After obtaining the repository, you can reference the relevant Tinos.Api project from your own project.
+
+Open your project's `.csproj` file and add the following inside an `<ItemGroup>`:
 
 ```xml
-<ProjectReference Include="path/to/Tinos.Api.csproj" />
+<ProjectReference Include="path/to/Tinos.Api.Common.csproj" />
 ```
