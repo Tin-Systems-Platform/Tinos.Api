@@ -15,7 +15,7 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Tin-Systems-Platform/Tinos.Api</RepositoryUrl>
-    <Version>1.0.0-alpha</Version>
+    <Version>1.0.0-alpha2</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
