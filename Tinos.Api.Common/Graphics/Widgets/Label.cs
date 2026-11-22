@@ -1,11 +1,12 @@
 ﻿using Cosmos.Kernel.System.Graphics;
 using Cosmos.Kernel.System.Graphics.Fonts;
 using System.Drawing;
+using Tinos.Api.Common.Interfaces;
 
 namespace Tinos.Api.Common.Graphics.Widgets
 {
     /// <summary>Displays text at a fixed position on a canvas.</summary>
-    public class Label
+    public class Label : IWidget
     {
         /// <summary>Gets or sets the horizontal position of the label.</summary>
         public int X { get; set; }
@@ -15,6 +16,14 @@ namespace Tinos.Api.Common.Graphics.Widgets
 
         /// <summary>Gets or sets the text displayed by the label.</summary>
         public string Text { get; set; }
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        public int Width { get; set; }
+        /// <summary>
+        /// <inheritdoc/>
+        /// </summary>
+        public int Height { get; set; }
 
         /// <summary>Draws the label using the shared default font and black text.</summary>
         /// <param name="canvas">The canvas on which to draw the label.</param>

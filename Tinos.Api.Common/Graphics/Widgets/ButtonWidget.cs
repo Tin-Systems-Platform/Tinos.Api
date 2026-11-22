@@ -2,11 +2,12 @@ using System;
 using Cosmos.Kernel.System;
 using Cosmos.Kernel.System.Graphics;
 using System.Drawing;
+using Tinos.Api.Common.Interfaces;
 
 namespace Tinos.Api.Common.Graphics.Widgets;
 
-/// <summary>A rectangular button that tracks pointer hover and press state.</summary>
-public class ButtonWidget
+/// <summary>A rectangular button that tracks pointer hover and press state. Extends the IWidget interface.</summary>
+public class ButtonWidget : IWidget
 {
         /// <summary>Gets or sets the button's horizontal position on its canvas.</summary>
     public int X { get; set; }
