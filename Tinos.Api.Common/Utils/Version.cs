@@ -26,12 +26,12 @@ namespace Tinos.Api.Common.Utils
         /// Major version number.
         /// </summary>
         public int Major { get; }
-        
+
         /// <summary>
         /// Minor version number.
         /// </summary>
         public int Minor { get; }
-        
+
         /// <summary>
         /// Patch version number.
         /// </summary>
