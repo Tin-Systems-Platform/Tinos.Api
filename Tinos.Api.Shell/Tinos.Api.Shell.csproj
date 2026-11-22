@@ -9,6 +9,7 @@
     <Version>1.0.0-alpha</Version>
     <Authors>Tinos API contributors</Authors>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Description>The shell component for Tinos.Api</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
