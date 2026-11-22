@@ -18,8 +18,8 @@
 - [ ] Configuration library for consumers to easily add configuration options and settings.
 
 ## Publishing and misc
-- [ ] Add a NuGet package for the library.
-- [ ] Make sure it supports VB.NET
+- [x] Add a NuGet package for the library.
+- [x] Make sure it supports VB.NET
 - [x] Add a license file and ensure proper licensing for all dependencies.
 - [x] Add a README file with usage instructions and examples.
 - [ ] Examples of the library on a example cosmos kernel.

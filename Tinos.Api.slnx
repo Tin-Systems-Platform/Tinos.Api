@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="Tinos.Api.Common/Tinos.Api.Common.csproj" />
+  <Project Path="Tinos.Api.Shell/Tinos.Api.Shell.csproj" Id="5a54fcb9-5f06-4bbf-bfea-738475a822c9" />
 </Solution>

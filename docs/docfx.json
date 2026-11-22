@@ -4,7 +4,8 @@
   "metadata": [
     {
       "src": [
-        { "src": "../Tinos.Api.Common", "files": [ "Tinos.Api.Common.csproj" ] }
+        { "src": "../Tinos.Api.Common", "files": [ "Tinos.Api.Common.csproj" ] },
+        { "src": "../Tinos.Api.Shell", "files": [ "Tinos.Api.Shell.csproj" ] }
       ],
       "dest": "api",
       "disableGitFeatures": true,
