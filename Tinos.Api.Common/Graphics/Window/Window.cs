@@ -8,7 +8,7 @@ using Tinos.Api.Common.Interfaces;
 namespace Tinos.Api.Common.Graphics.Windows;
 
 /// <summary>A movable, renderable window with a title bar and optional content.</summary>
-public class Window
+public class Window : IWindow
 {
     /// <summary>Gets or sets the horizontal position of the window.</summary>
     public int X { get; set; }
@@ -22,6 +22,8 @@ public class Window
     public string Title { get; set; }
     /// <summary>Gets or sets whether this window is active.</summary>
     public bool IsActive { get; set; }
+    /// <summary>Gets or sets the content rendered inside the window.</summary>
+    public IWindowContent Content { get => _content; set { _content = value; IsDirty = true; } }
 
     // Efficiency: Only redraw the off-screen canvas when something changes
     /// <summary>Gets or sets whether the cached window rendering needs to be redrawn.</summary>
@@ -30,7 +32,11 @@ public class Window
     private readonly Canvas _offscreenCanvas;
     private readonly ButtonWidget _closeButton;
 
-    private readonly IWindowContent _content;
+    private IWindowContent _content;
+
+    string IWindow.Title { get => Title; set { Title = value; IsDirty = true; } }
+    int IWindow.x { get => X; set { X = value; IsDirty = true; } }
+    int IWindow.y { get => Y; set { Y = value; IsDirty = true; } }
 
     /// <summary>Creates a window with the specified bounds, title, and optional content.</summary>
     /// <param name="x">The horizontal position of the window.</param>
