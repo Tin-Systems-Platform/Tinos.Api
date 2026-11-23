@@ -1,11 +1,12 @@
 ﻿using Cosmos.Kernel.System.Graphics;
 using System;
 using System.Drawing;
+using Tinos.Api.Common.Interfaces;
 
 namespace Tinos.Api.Common.Graphics.Widgets
 {
     /// <summary>A single-line text input control that accepts keyboard input while focused.</summary>
-    public class TextBox
+    public class TextBox : IWidget
     {
         private const int HorizontalPadding = 5;
         private const int GlyphWidth = 10;

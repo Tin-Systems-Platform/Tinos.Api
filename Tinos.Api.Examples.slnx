@@ -1,4 +1,5 @@
 <Solution>
 <Project Path="examples/Tinos.Api.Examples.Fs/Tinos.Api.Examples.Fs.csproj" />
 <Project Path="examples/Tinos.Api.Examples.VB.Fs/Tinos.Api.Examples.VB.Fs.vbproj"/>
+<Project Path="examples/Tinos.Api.Examples.Graphics/Tinos.Api.Examples.Graphics.csproj" />
 </Solution>

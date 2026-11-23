@@ -32,15 +32,15 @@ namespace Tinos.Api.Shell
             {
                 Console.Write("> ");
                 string input = Console.ReadLine();
-                
+
                 if (string.IsNullOrWhiteSpace(input))
                     continue;
-                
+
                 string[] parts = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-                
+
                 string commandName = parts[0];
                 ICommand command = _commandRegistry.Commands.FirstOrDefault(c => c.Name.Equals(commandName, StringComparison.OrdinalIgnoreCase));
-                
+
                 if (command != null)
                 {
                     try
