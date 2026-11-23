@@ -3,6 +3,7 @@ using Cosmos.Kernel.System;
 using Cosmos.Kernel.System.Graphics;
 using System.Drawing;
 using Tinos.Api.Common.Graphics.Widgets;
+using Tinos.Api.Common.Interfaces;
 
 namespace Tinos.Api.Common.Graphics.Windows;
 
